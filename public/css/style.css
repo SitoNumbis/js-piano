@@ -14,17 +14,57 @@ body {
 }
 
 header {
-    height: 40vh;
+    height: 5vh;
     width: 100%;
     display: flex;
     align-items: center;
+    background-color: #0f2027;
+}
+
+.left {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left h1 {
+    color: aliceblue;
+}
+
+.expand {
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.menu {
+    list-style: none;    
+}
+
+.menu li {
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.menu li:hover {
+    color:#4b8ca8
 }
 
 .piano {
-    height: 60vh;
+    height: 95vh;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.key {
+    margin-top: 50px;
 }
 
 .white {
