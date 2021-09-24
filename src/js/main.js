@@ -4,7 +4,27 @@ const regulars = document.querySelectorAll('.key.white');
 const sharps = document.querySelectorAll('.key.black');
 
 const whites = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
-const blacks = ['w', 'e', 'r', 't', 'y'];
+const blacks = ['w', 'e', 't', 'y', 'u'];
+
+const notes = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B'];
+
+notes.forEach((key) => {
+
+    let div = document.createElement('div');
+
+    div.classList.add('key');
+    if (key.indexOf('s') == -1) 
+        div.classList.add('white');
+    else
+        div.classList.add('black');
+
+    div.dataset.note = key;
+
+    document.getElementsByClassName('piano')[0].appendChild(div)
+
+    console.log(key);
+
+});
 
 keys.forEach((key) => {
     key.addEventListener('click', () => playNote(key));
