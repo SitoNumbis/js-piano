@@ -1,8 +1,3 @@
-const keys = document.querySelectorAll('.key');
-
-const regulars = document.querySelectorAll('.key.white');
-const sharps = document.querySelectorAll('.key.black');
-
 const whites = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
 const blacks = ['w', 'e', 't', 'y', 'u'];
 
@@ -18,6 +13,8 @@ notes.forEach((key) => {
     else
         div.classList.add('black');
 
+
+    div.id = key;
     div.dataset.note = key;
 
     document.getElementsByClassName('piano')[0].appendChild(div)
@@ -25,6 +22,11 @@ notes.forEach((key) => {
     console.log(key);
 
 });
+
+const keys = document.querySelectorAll('.key');
+
+const regulars = document.querySelectorAll('.key.white');
+const sharps = document.querySelectorAll('.key.black');
 
 keys.forEach((key) => {
     key.addEventListener('click', () => playNote(key));
