@@ -37,7 +37,11 @@ const regulars = document.querySelectorAll('.key.white');
 const sharps = document.querySelectorAll('.key.black');
 
 keys.forEach((key) => {
-    key.addEventListener('click', () => playNote(key));
+    key.addEventListener('mousedown', () => playNote(key));
+    key.addEventListener('mouseup', () => {
+        console.log('hola');
+        key.classList.remove('active');
+    });
 });
 
 document.addEventListener('keyup', (e) => {
