@@ -1,8 +1,10 @@
 /*const whites = ['a', 's', 'd', 'f', 'g', 'h', 'j'];
 const blacks = ['w', 'e', 't', 'y', 'u'];*/
-const allKeys = ['a', 'w', 's', 'e', 'd', 'f', 't', 'g', 'y', 'h', 'u', 'j'];
+const allKeys = ['q', '2', 'w', '3', 'e', 'r', '5', 't', 6, 'y', '7', 'u',
+                 'v', 'g', 'b', 'h', 'n', 'm', 'k', ',', 'l', '.', ';', '/'];
 
-const notes = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B'];
+const notes = ['C5', 'Cs5', 'D5', 'Ds5', 'E5', 'F5', 'Fs5', 'G5', 'Gs5', 'A5', 'As5', 'B5', 
+               'C6', 'Cs6', 'D6', 'Ds6', 'E6', 'F6', 'Fs6', 'G6', 'Gs6', 'A6', 'As6', 'B6'];
 let keyPressed = [];
 
 var i = 0;
@@ -17,7 +19,7 @@ notes.forEach((key) => {
     else
         div.classList.add('black');
 
-    div.id = key;
+    div.id = "k" + key;
     div.dataset.note = key;
 
     let h1 = document.createElement('h1');
@@ -39,7 +41,6 @@ const sharps = document.querySelectorAll('.key.black');
 keys.forEach((key) => {
     key.addEventListener('mousedown', () => playNote(key));
     key.addEventListener('mouseup', () => {
-        console.log('hola');
         key.classList.remove('active');
     });
 });
