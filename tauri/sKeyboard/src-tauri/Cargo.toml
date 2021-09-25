@@ -1,8 +1,8 @@
 [package]
-name = "app"
+name = "sKeyboard"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "sKeyboard"
+authors = ["Sito"]
 license = ""
 repository = ""
 default-run = "app"
