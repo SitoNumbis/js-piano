@@ -11,6 +11,11 @@ let keyPressed = [];
 
 var i = 0;
 
+//var audioSynth = new AudioSynth;
+
+//src = __audioSynth.generate("C5", 'C', '6', 5)
+/*src = */
+
 notes.forEach((key) => {
 
     let div = document.createElement('div');
@@ -61,14 +66,15 @@ document.addEventListener('keyup', (e) => {
 })
 
 let playNote = (key) => {
-    const noteSound = document.getElementById(key.dataset.note);
+    Synth.play(0, 'C', '4', 5)
+    /*const noteSound = document.getElementById(key.dataset.note);
     noteSound.currentTime = 0;
     noteSound.play();
     key.classList.add('active');
     noteSound.addEventListener('ended', () => {
         if (keyPressed.indexOf(key.children[0].innerText) == -1)
             key.classList.remove('active');
-    });
+    });*/
 };
 
 document.addEventListener('keydown', (e) => {
