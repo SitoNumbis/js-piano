@@ -9,6 +9,8 @@ const notes = ['C4', 'Cs4', 'D4', 'Ds4', 'E4', 'F4', 'Fs4', 'G4', 'Gs4', 'A4', '
                'C6', 'Cs6', 'D6', 'Ds6', 'E6', 'F6', 'Fs6', 'G6', 'Gs6', 'A6', 'As6', 'B6'];
 let keyPressed = [];
 
+var piano = Synth.createInstrument('piano');
+
 var i = 0;
 
 //var audioSynth = new AudioSynth;
@@ -66,7 +68,16 @@ document.addEventListener('keyup', (e) => {
 })
 
 let playNote = (key) => {
-    Synth.play(0, 'C', '4', 5)
+    let note;
+    let octaves
+    if (key.id[2] == 's' ) {
+        note = key.id[1] + '#'
+        octaves = key.id[3];
+    } else {
+        note = key.id[1]
+        octaves = key.id[2];
+    } //else
+    piano.play(note, octaves, 2)
     /*const noteSound = document.getElementById(key.dataset.note);
     noteSound.currentTime = 0;
     noteSound.play();
